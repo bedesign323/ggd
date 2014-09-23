@@ -1,0 +1,605 @@
+@import "compass";
+@import "_reset";
+@import "_fonts";
+@import "_icons";
+@import "_base";
+
+/* BASIC STYLES
+-------------------------------------------------------------- */
+*{
+  @include box-sizing('border-box');
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+body{
+  font: 16px/1.5 $font_main;
+  background-color: $page_bg;  
+  color: $color_main;
+}
+
+a{
+  @include transition;
+  color: $color_accent;
+  text-decoration: none;
+  
+  &:hover{
+    color: $color_main;
+  }
+}
+
+h1{
+  font-family: $font_header;
+  text-transform: uppercase;
+}
+
+
+ul,
+ul.menu,
+ul.menu li{
+  list-style: none;
+  text-align: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+li a.active,
+li.opened span.nolink{color: $color_main;}
+
+/* Layout
+-------------------------------------------------------------- */
+#bg-images{
+  display: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: fixed;
+
+  @include bp(m){
+    height: 50%;
+    top: 80px;
+  }
+}
+
+#header-container{
+  @include pie-clearfix;
+  background-color: $color_main;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+
+  a{
+    color: #fff;
+
+    &:hover{
+      color: $color_accent;
+    }
+
+    &.active{
+      color: $color_accent;
+    }
+  }
+
+  .region-nav-main{
+    float: left;
+
+    a{
+      font-size: .7em;
+    }
+
+    @include bp(m){
+      float: none;
+
+      a{
+        padding: 10px 0;
+        display: block;
+      }
+    }
+  }
+  .social-icons{
+    float: left;
+
+    @include bp(m){
+      float: none;
+      padding-bottom: 20px;
+
+      a{
+        padding: 0 10px;
+      }
+    }
+  }
+  
+  @include bp(m){
+    position: relative;
+    height: auto;
+    padding: 0;
+  }
+
+}
+
+#logo{
+  font-family: $font_header;
+  text-transform: uppercase;
+  float: left;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  line-height: 60px;
+
+  @include bp(m){
+    line-height: normal;
+    padding: 20px 0;
+    font-size: 1em;
+    float: none;
+    text-align: center;
+  }
+
+}
+
+
+
+#main-nav{
+  @include pie-clearfix;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  float: right;
+  line-height: 60px;
+
+
+
+	ul{}
+
+	li{
+    display: inline-block;
+    margin-right: 20px;
+
+  }
+
+	a{
+
+		&:hover{
+    }
+
+		&.active{
+    }
+	}
+
+  @include bp(m){
+    text-align: center;
+    line-height: normal;
+    float: none;
+
+
+    ul{
+      text-align: center !important;
+    }
+
+    li{
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+}
+
+#menu{
+  display: block;
+
+  @include bp(m){
+    display: none;
+  }
+}
+
+.menu-toggle{
+  @include transition;
+  display: none;
+  
+  z-index: 900;
+  width: 100%;
+  background-color: $color_accent;
+  color: $page_bg;
+  padding: 5px;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $color_main;
+  }
+
+  @include bp(m){
+    display: block;
+  }
+}
+
+#main-container{
+  margin-top: 120px;
+
+  .main{
+    max-width: $bp_lg;
+    margin: auto;
+  }
+
+  @include bp(m){
+    margin-top: 40px;
+  }
+}
+
+.page-node-8{
+
+  #bg-images{
+    display: block;
+  }
+
+  #header-container{
+    top: auto;
+    bottom: 80px;
+    padding: 40px 80px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+
+    @include bp(m){
+      background-color: $color_main;
+      text-align: left;
+      bottom: auto;
+      top: 0;
+      padding: 0;
+    }
+  }
+
+  #main-nav,
+  #logo{
+    float: none;
+    line-height: normal;
+    z-index: 10;
+    position: relative;
+  }
+
+  #logo{
+    margin-bottom: 20px;
+    font-size: 2.5em;
+
+    @include bp(m){
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  #bg {
+    border-right: 50px solid transparent;
+    border-top: 180px solid black;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    @include bp(m){
+      display: none;
+    }
+  }
+
+  @include bp(m){
+    background-color: $color_main; 
+  }
+
+}
+
+.page-node-3{
+
+  .main{
+
+    .info{
+      padding-top: 100px;
+      font-family: $font_header;
+      margin-bottom: 40px;
+    }
+
+    a{
+      font-size: 2em;
+      color: $color_main;
+      
+
+      &:hover{
+        color: $color_accent;
+      }
+    }
+  }
+
+  @include bp(m){
+    .info a{
+      font-size: 1em;
+    }
+  }
+}
+
+/* VIDEO
+-------------------------------------------------------------- */
+.teaser.video{
+  width: 50%;
+  padding: 20px;
+  float: left;
+  margin-bottom: 40px;
+
+  .video{
+
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  h2{
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    a{
+      color: $color_main;
+
+      &:hover{
+        color: $color_accent;
+      }
+    }
+  }
+
+  @include bp(m){
+    padding: 10px;
+    width: 100%;
+    float: none; 
+  }
+}
+
+.video.full{
+  max-width: 900px;
+  margin: auto;
+
+  h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .back{
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  @include bp(m){
+    padding: 10px;
+
+  }
+}
+
+
+/* IMAGE GALLERY
+-------------------------------------------------------------- */
+
+.gallery{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+
+  .images{
+    ul{
+      margin: 0 !important;
+    }
+
+    li{
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      margin: 0;
+      padding: 80px 20px;
+      height: 100%;
+      display: none;
+
+      .image-group,
+      .single-image{
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      img{
+        display: inline-block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
+
+      @include bp(m){
+        position: relative !important;
+        top: auto;
+        left: auto;
+        height: auto;
+        padding: 2px 10px;
+        display: block !important;
+
+        img{
+          margin-top: 0 !important;
+        }
+      }
+    }
+  
+  .captions{
+    @include pie-clearfix;
+    font-size: .6em;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+
+    .caption{
+      text-align: left;
+    }
+    
+    .c-left{
+      float: left;
+    }
+
+    .c-right{
+      float: right;
+    }
+
+    @include bp(m){
+      margin-bottom: 20px;
+    }
+
+  }
+    
+    
+  }
+}
+
+#controls{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: $body_pad;
+
+  .item-next,
+  .item-last{
+    @include inline-block;
+    @include transition;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+
+    &:hover{
+      color: $color_accent;
+    };
+  }
+
+  .item-last{
+    background-position: -15px 0;
+  }
+
+  @include bp(m){
+    display: none !important;
+  }
+}
+
+.extras{
+   @include inline-block;
+   background-color: darken($page_bg, 5%);
+   height: 40px;
+    text-align: center;
+    line-height: 35px;
+    padding: 0 20px;
+}
+
+.image-count{
+  @include inline-block;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+}
+
+.thumbs-btn,
+.details-btn{
+  @include inline-block;
+  @include transition;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition: opacity $trans ease;
+  margin: 0 15px 0 0;
+
+  span{
+    width: 3px;
+    height: 3px;
+    display: block;
+    float: left;
+    margin: 1.5px;
+    background-color: $color_main;
+  
+  }
+
+  &:hover{
+    background-color: $color_accent;
+  } 
+}
+
+.is-thumb{
+  height: auto;
+  text-align: center;
+  margin-top: 70px;
+  padding: 0 20px;
+
+  .images{
+    max-width: 1200px;
+    margin: auto;
+
+    ul{
+      margin: 0 !important;
+    }
+
+    li{
+      display: inline-block !important;
+      position: relative !important;
+      top: auto;
+      left: auto;
+      width: auto;
+      height: 230px;
+      text-align: center;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+
+      img{
+        padding: 10px;
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin-top: 0 !important;
+      }
+    }
+    
+  }
+
+
+
+  #controls,
+  .captions{
+    display: none !important;
+  }
+}
+
+.krumo-root{
+  z-index: 1000;
+}
+
+.service-links{
+
+  li{
+    @include inline-block;
+  }
+}
+
+
+
+
+

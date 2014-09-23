@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://ggd.dev/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://ggd.dev/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://ggd.dev/video/kauai</loc><lastmod>2014-09-22T23:47Z</lastmod><changefreq>daily</changefreq></url>
+<url><loc>http://ggd.dev/video/made-ig-4th-july-pool-party-directors-cut</loc><lastmod>2014-09-22T23:49Z</lastmod><changefreq>daily</changefreq></url>
+<url><loc>http://ggd.dev/video/whiplash</loc><lastmod>2014-09-22T23:50Z</lastmod><changefreq>daily</changefreq></url>
+<url><loc>http://ggd.dev/gallery/landscape</loc><lastmod>2014-09-23T01:46Z</lastmod><changefreq>daily</changefreq></url>
+<url><loc>http://ggd.dev/gallery/street</loc><lastmod>2014-09-23T03:48Z</lastmod><changefreq>hourly</changefreq></url>
+<url><loc>http://ggd.dev/gallery/portraits</loc><lastmod>2014-09-23T02:20Z</lastmod><changefreq>hourly</changefreq></url>
+<url><loc>http://ggd.dev/gallery/intro-gallery</loc><lastmod>2014-09-23T02:27Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://ggd.dev/video/nieces-nephew</loc><lastmod>2014-09-22T23:46Z</lastmod><changefreq>daily</changefreq></url>
+</urlset>
